@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>WILL CHANGE</h1>
+  <label>Enter number: <input type="number" id="string1" placeholder="Enter first number"></label>
+  <label>Enter number: <input type="number" id="string2" placeholder="Enter second number">
+  <button onclick="myn()">Print</button>
+  <p id="y"></p>
+
+  <script>
+    function myn() {
+      var firstNumber = document.getElementById("string1");
+      var secondNumber = document.getElementById("string2");
+
+      var sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+      document.getElementById("y").innerHTML = "Sum: " + sum;
+
+      // Clear input values
+      firstNumber.value = "";
+      secondNumber.value = "";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1 style="color: green;">CHANGE COLOR OF TEXT</h1>
+
+        <h2 id="string1">AMAL MANOJ</h2>
+        <input type="color" id="string2", placeholder="enter a color"  oninput="changecolor()"> 
+        <button onclick="col()">change</button>
+        <P id="color"></P>
+        <script>
+            function changecolor(){
+                var select=document.getElementById("string1");
+           var change=document.getElementById("string2").value;
+select.style.color=change;
+            }
+            function col(){
+           var select=document.getElementById("string1");
+           var change=document.getElementById("string2").value;
+select.style.color=change;
+document.getElementById("color").innerHTML="changed";}
+        </script>
+    </body>

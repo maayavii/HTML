@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1 style="color: green;">CHANGE BACKGROUND COLOR</h1>
+        <button onclick="bg()">change-color</button>
+        <p id="col"></p>
+ <script>
+    var colors=["white","blue","green","red","yellow"];
+    var current=0;
+    document.addEventListener(function() {
+                // This ensures that the script runs after the DOM is fully loaded
+                document.body.style.backgroundColor = colors[current];})
+    function bg(){
+        var body=document.body;
+        body.style.backgroundColor=colors[current];
+        document.getElementById("col").innerHTML="color changed";
+        current=(current+1)%colors.length;
+
+
+    }
+ </script>
+    </body>
+</html>
