@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1 style="color: green;">CHANGE COLOR OF TEXT</h1>
+
+        <h2 id="string1">AMAL MANOJ</h2>
+        <button onclick="col()">change</button>
+        <P id="color"></P>
+    </body>
+    <script>
+         var colors=["red","green","blue","orange"]
+            var current=0;
+        function col(){
+           
+var x=document.getElementById("string1");
+x.style.color=colors[current];
+document.getElementById("color").innerHTML="color changed"+colors[current];
+current=(current+1)%colors.length;
+        }
+        
+
+
+    </script>
+</html>
