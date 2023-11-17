@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="sheet.css">
+</head>
+<body>
+    <table style="background: #F8DE22;">
+        <tr style="background: #E9B824;">
+            <th colspan="2">The World of Fruits</th>
+        </tr>
+        <tr>
+            <th colspan="2">Fruit survey</th>
+        </tr>
+        <form id="myForm" onsubmit="return myn()">
+            <tr>
+                <th>Name</th>
+                <td>
+                    <input type="text" name="name" required />
+                </td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>
+                    <input type="text" name="address" required />
+                </td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>
+                    <input type="email" name="email" required />
+                </td>
+            </tr>
+            <tr>
+                <th>How many pieces of fruit do you eat per day?</th>
+                <td>
+                    <input type="radio" name="fruit" id="fruit0" value="0" required />
+                    <label for="fruit0">0</label>
+                    <br />
+                    <input type="radio" name="fruit" id="fruit1" value="1" />
+                    <label for="fruit1">1</label>
+                    <br />
+                    <input type="radio" name="fruit" id="fruit2" value="2" />
+                    <label for="fruit2">2</label>
+                    <br />
+                    <input type="radio" name="fruit" id="fruitMore" value="more than 2" />
+                    <label for="fruitMore">more than 2</label>
+                </td>
+            </tr>
+            <tr>
+                <th>My favorite fruit</th>
+                <td>
+                    <select name="favoriteFruit" multiple>
+                        <option value="apple">Apple</option>
+                        <option value="banana">Banana</option>
+                        <option value="plum">Plum</option>
+                        <option value="pomegranate">Pomegranate</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Would you like a brochure</th>
+                <td>
+                    <input type="checkbox" name="brochure" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="submit">SUBMIT</button>
+                </th>
+            </tr>
+        </form>
+    </table>
+
+    <script>
+        function myn() {
+            var form = document.getElementById('myForm');
+            var name = form.elements['name'].value;
+            var address = form.elements['address'].value;
+            var email = form.elements['email'].value;
+            var fruit = form.elements['fruit'].value;
+
+            if (name === "" || address === "" || email === "" || fruit === "") {
+                alert("Please fill out all fields");
+                return false;
+            }
+
+            // Additional validation logic can be added here
+
+            return true; // Returning true allows the form to submit
+        }
+    </script>
+</body>
+</html>

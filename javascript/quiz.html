@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QUIZ BY AMAL MANOJ</title>
+    <style>
+        fieldset {
+            margin-bottom: 10px;
+        }
+        legend{ font-family: Georgia, 'Times New Roman', Times, serif;}
+
+        body{
+        padding-left: 20%;}
+
+        form{border: 8PX solid black;
+           width: fit-content;
+        background-color: rgb(197, 104, 17);}
+    </style>
+
+</head>
+<body>
+
+<h1>QUIZ BY AMAL MANOJ</h1>
+
+<form id="quizForm">
+    <fieldset>
+        <legend>Question 1: INDEPENDENCE DAY?</legend>
+
+        <input type="radio" id="Q1_OPTION1" name="Q1_OPTION" value="0">
+        <label for="Q1_OPTION1">AUGUST 15</label>
+
+        <input type="radio" id="Q1_OPTION2" name="Q1_OPTION" value="1">
+        <label for="Q1_OPTION2">SEP 2</label>
+
+        <input type="radio" id="Q1_OPTION3" name="Q1_OPTION" value="2">
+        <label for="Q1_OPTION3">NOVEMBER 14</label>
+
+        <input type="radio" id="Q1_OPTION4" name="Q1_OPTION" value="3">
+        <label for="Q1_OPTION4">AUGUST 14</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Question 2: CAPITAL OF FRANCE?</legend>
+
+        <input type="radio" id="Q2_OPTION1" name="Q2_OPTION" value="0">
+        <label for="Q2_OPTION1">Berlin</label>
+
+        <input type="radio" id="Q2_OPTION2" name="Q2_OPTION" value="1">
+        <label for="Q2_OPTION2">Madrid</label>
+
+        <input type="radio" id="Q2_OPTION3" name="Q2_OPTION" value="2">
+        <label for="Q2_OPTION3">Paris</label>
+
+        <input type="radio" id="Q2_OPTION4" name="Q2_OPTION" value="3">
+        <label for="Q2_OPTION4">Rome</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Question 2: CAPITAL OF INDIA?</legend>
+
+        <input type="radio" id="Q3_OPTION1" name="Q3_OPTION" value="0">
+        <label for="Q2_OPTION1">Berlin</label>
+
+        <input type="radio" id="Q3_OPTION2" name="Q3_OPTION" value="1">
+        <label for="Q2_OPTION2">Madrid</label>
+
+        <input type="radio" id="Q3_OPTION3" name="Q3_OPTION" value="2">
+        <label for="Q2_OPTION3">DELHI</label>
+
+        <input type="radio" id="Q3_OPTION4" name="Q3_OPTION" value="3">
+        <label for="Q2_OPTION4">Rome</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Question 2: SPIDER MAN'S REAL NAME</legend>
+
+        <input type="radio" id="Q4_OPTION1" name="Q4_OPTION" value="0">
+        <label for="Q4_OPTION1">PEATER PARKER</label>
+
+        <input type="radio" id="Q4_OPTION2" name="Q4_OPTION" value="1">
+        <label for="Q4_OPTION2">STEVE ROGERS</label>
+
+        <input type="radio" id="Q4_OPTION3" name="Q3_OPTION" value="2">
+        <label for="Q4_OPTION3">BEN PARKER</label>
+
+        <input type="radio" id="Q4_OPTION4" name="Q3_OPTION" value="3">
+        <label for="Q4_OPTION4">MILES MORALIS</label>
+    </fieldset>
+ 
+    <fieldset>
+        <legend>Question 2: BATMANS CITY</legend>
+
+        <input type="radio" id="Q5_OPTION1" name="Q5_OPTION" value="0">
+        <label for="Q5_OPTION1">QUEENS</label>
+
+        <input type="radio" id="Q5_OPTION2" name="Q5_OPTION" value="1">
+        <label for="Q5_OPTION2">METROPOLIS</label>
+
+        <input type="radio" id="Q5_OPTION3" name="Q5_OPTION" value="2">
+        <label for="Q5_OPTION3">WAKANDA</label>
+
+        <input type="radio" id="Q5_OPTION4" name="Q5_OPTION" value="3">
+        <label for="Q5_OPTION4">GOTHAM</label>
+    </fieldset>
+
+    <button type="button" onclick="checkAnswers()">Submit</button>
+</form>
+
+<script>
+    function checkAnswers() {
+        var score = 0;
+
+        // Check Question 1
+        var q1Answers = document.forms["quizForm"].elements["Q1_OPTION"];
+        for (var i = 0; i < q1Answers.length; i++) {
+            if (q1Answers[i].checked && q1Answers[i].value === "0") {
+                score++;
+            }
+        }
+
+        // Check Question 2
+        var q2Answers = document.forms["quizForm"].elements["Q2_OPTION"];
+        for (var j = 0; j < q2Answers.length; j++) {
+            if (q2Answers[j].checked && q2Answers[j].value === "2") {
+                score++;
+            }
+        }
+// CHECK QUSTION 3
+        var q3Answers=document.forms["quizForm"].elements["Q3_OPTION"]
+        for ( var k=0; k<q3Answers.length;k++){
+           if(q3Answers[k].checked&&q3Answers[k].value==="2"){
+            score++;
+           }}
+        // QUSTION 4
+
+        var q4Answers = document.forms["quizForm"].elements["Q4_OPTION"];
+        for (var l = 0; l < q2Answers.length; l++) {
+            if (q2Answers[l].checked && q2Answers[l].value === "0") {
+                score++;}}
+
+                var q5Answers = document.forms["quizForm"].elements["Q5_OPTION"];
+        for (var M = 0; M < q2Answers.length; M++) {
+            if (q2Answers[M].checked && q2Answers[M].value === "0") {
+                score++;}}
+
+        alert("Your final score is: " + score);
+    }
+</script>
+
+</body>
+</html>
