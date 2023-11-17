@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <h1 style="color: green;">CALCULATE THE AGE</h1>
+
+        <button onclick="cal()">calculate-age</button>
+        <p id="age"></p>
+
+        <script>
+            function cal() {
+                var name = prompt("Enter your name");
+                var dobString = prompt("Enter your date of birth in yyyy-mm-dd format");
+                
+                if (name && dobString) {
+                    var dob = new Date(dobString);
+                    var today = new Date();
+                    var age = today.getFullYear() - dob.getFullYear();
+                    
+                    // Adjust age if the birthday hasn't occurred yet this year
+                    if (today.getMonth() < dob.getMonth() || (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())) {
+                        age--;
+                    }
+
+                    var ageDisplay = document.getElementById("age");
+                    ageDisplay.innerHTML = "Hello, " + name + "! Your age is: " + age + " years.";
+                } else {
+                    alert("Please enter both name and date of birth.");
+                }
+            }
+        </script>
+    </body>
+</html>
